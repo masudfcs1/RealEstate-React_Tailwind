@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import CountryDropdown from "./CountryDropdown";
 import PriceRangeDropdown from "./PriceRangeDropdown";
 import PropertyDropdown from "./PropertyDropdown";
 
 import { RiSearch2Line } from "react-icons/ri";
+import { HouseContext } from "./HouseContext";
 
 const Search = () => {
   return (
