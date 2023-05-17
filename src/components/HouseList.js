@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 const HouseList = () => {
-  return <div>HouseList</div>;
+  return <div> HouseList </div>;
 };
 
 export default HouseList;

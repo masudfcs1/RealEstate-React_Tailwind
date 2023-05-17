@@ -13,7 +13,6 @@ const CountryDropdown = () => {
   const { country, setcountry, countries } = useContext(HouseContext);
   const [isopen, setisopen] = useState(false);
 
-  console.log(countries);
   return (
     <Menu as="div" className="dropdown relative">
       <Menu.Button
@@ -28,9 +27,9 @@ const CountryDropdown = () => {
           </div>{" "}
           <div className="text-[13px]"> Select your place </div>{" "}
           {isopen ? (
-            <RiArrowUpSLine className="dropdown-icon-secondary" />
-          ) : (
             <RiArrowDownSLine className="dropdown-icon-secondary" />
+          ) : (
+            <RiArrowUpSLine className="dropdown-icon-secondary" />
           )}{" "}
         </div>{" "}
       </Menu.Button>{" "}
