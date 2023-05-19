@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import PropertyDetails from "./pages/PropertyDetails";
+import PropertyDetails from "./pages/PropertyDetails.js";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -12,7 +12,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />{" "}
-        <Route path="/product/:id" element={<PropertyDetails />} />{" "}
+        <Route path="/property/:id" element={<PropertyDetails />} />{" "}
       </Routes>{" "}
       <Footer />
     </div>
