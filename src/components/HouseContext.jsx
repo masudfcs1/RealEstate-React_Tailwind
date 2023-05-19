@@ -38,6 +38,8 @@ const HouseContextProvider = ({ children }) => {
   const handleClick = () => {
     // console.log(country, property, price);
 
+    setloading(true);
+
     const isDefault = (str) => {
       return str.split(" ").includes("(any)");
     };
@@ -86,14 +88,19 @@ const HouseContextProvider = ({ children }) => {
         }
       }
 
-      if (!isDefault(property) && !isDefault(country) && !isDefault(price)) {
+      if (!isDefault(property) && isDefault(country) && !isDefault(price)) {
         if (houseprice >= minprice && houseprice <= maxprice) {
           return house.type === property;
         }
       }
     });
 
-    console.log(newHouse);
+    setTimeout(() => {
+      return (
+        newHouse.length < 1 ? sethouses([]) : sethouses(newHouse),
+        setloading(false)
+      );
+    }, 1000);
   };
 
   return (
@@ -110,6 +117,7 @@ const HouseContextProvider = ({ children }) => {
         houses,
         loading,
         handleClick,
+        loading,
       }}
     >
       {children}{" "}
